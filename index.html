@@ -1,37 +1,129 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pagina Semplice</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f9; color: #333; }
-    header { background: #4a90e2; color: white; padding: 25px 20px; text-align: center; }
-    main { padding: 20px; }
-    .card { background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin: 20px auto; max-width: 700px; padding: 20px; }
-    .btn { display:inline-block; padding:10px 18px; background:#4a90e2; color:white; text-decoration:none; border-radius:5px; }
-    footer { text-align:center; padding:12px; color:#666; font-size:0.9rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyubey Dashboard - Incubator System</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;600&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estilo/style.css">
 </head>
 <body>
-  <header>
-    <h1>Benvenuto alla Pagina Semplice</h1>
-    <p>Esempio di struttura HTML + CSS</p>
-  </header>
-  <main>
-    <section class="card">
-      <h2>Contenuto Principale</h2>
-      <p>Questa è una pagina minimalista e responsiva. Puoi modificare titolo, testo e colori rapidamente.</p>
-      <ul>
-        <li>HTML semplificato</li>
-        <li>CSS inline per stile base</li>
-        <li>Layout mobile-friendly</li>
-      </ul>
-      <a class="btn" href="#">Azione esempio</a>
+
+<nav class="navbar navbar-dark mb-5">
+    <div class="container">
+        <span class="navbar-brand mb-0 h1">
+            <span class="status-dot"></span> INCUBATOR_OS <small class="text-muted ms-2" style="font-size: 0.7em;">v1.0.32</small>
+        </span>
+        <div class="text-end">
+            <span class="small text-muted me-2">ENTROPÍA DEL UNIVERSO: <span class="text-danger">98.4%</span></span>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    <header class="text-center mb-5">
+        <h1 class="display-3">CONTRATOS ACTIVOS</h1>
+        <p class="text-muted small">Terminal de monitoreo de gemas del alma de Mitakihara</p>
+    </header>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="card card-puella h-100 border-madoka">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: var(--madoka-pink);">Madoka Kaname</h5>
+                    <p class="text-muted x-small">ID: #001_DIVINE</p>
+                    <div class="progress bg-dark mb-2" style="height: 10px;">
+                        <div class="progress-bar bg-madoka" style="width: 15%"></div>
+                    </div>
+                    <label class="small text-muted">Corrupción: 15%</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-puella h-100 border-homura">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: var(--homura-purple);">Homura Akemi</h5>
+                    <p class="text-muted x-small">ID: #002_TIMER</p>
+                    <div class="progress bg-dark mb-2" style="height: 10px;">
+                        <div class="progress-bar bg-homura" style="width: 65%"></div>
+                    </div>
+                    <label class="small text-muted">Corrupción: 65%</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-puella h-100 border-sayaka">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: var(--sayaka-blue);">Sayaka Miki</h5>
+                    <p class="text-muted x-small">ID: #003_KNIGHT</p>
+                    <div class="progress bg-dark mb-2" style="height: 10px;">
+                        <div class="progress-bar bg-sayaka progress-bar-striped progress-bar-animated" style="width: 92%"></div>
+                    </div>
+                    <label class="small text-danger font-weight-bold">ALERTA: 92% (CRÍTICO)</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card card-puella h-100 border-mami">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: var(--mami-yellow);">Mami Tomoe</h5>
+                    <p class="text-muted x-small">ID: #004_VETERAN</p>
+                    <div class="progress bg-dark mb-2" style="height: 10px;">
+                        <div class="progress-bar bg-mami" style="width: 30%"></div>
+                    </div>
+                    <label class="small text-muted">Corrupción: 30%</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-puella h-100 border-kyoko">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: var(--kyoko-red);">Kyoko Sakura</h5>
+                    <p class="text-muted x-small">ID: #005_STREET</p>
+                    <div class="progress bg-dark mb-2" style="height: 10px;">
+                        <div class="progress-bar bg-kyoko" style="width: 45%"></div>
+                    </div>
+                    <label class="small text-muted">Corrupción: 45%</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="text-center mt-5 py-5 border-top border-secondary">
+        <h2 class="mb-4 text-white">¿Tienes un deseo que valga tu alma?</h2>
+        <button class="btn btn-contract px-5 py-3" data-bs-toggle="modal" data-bs-target="#contractModal">
+            INICIAR CONTRATO
+        </button>
     </section>
-  </main>
-  <footer>
-    <p>;&copy; 2026 Pagina Semplice</p>
-  </footer>
+</main>
+
+<div class="modal fade" id="contractModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-white">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-danger">FORMALIZAR CONTRATO</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center py-4">
+                <p class="fst-italic lead">"Conviértete en una Puella Magi y cumple tu destino."</p>
+                <p class="text-muted small mt-2">¿Estás dispuesta a pagar el precio?</p>
+            </div>
+            <div class="modal-footer border-0 justify-content-center">
+                <button type="button" class="btn btn-outline-light px-4" data-bs-dismiss="modal">RETROCEDER</button>
+                <button type="button" class="btn btn-danger px-4 shadow-sm">ACEPTAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

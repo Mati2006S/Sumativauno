@@ -1,0 +1,124 @@
+/* Variables de color temáticas CORREGIDAS */
+:root {
+    --madoka-pink: #ffb7c5;    /* Rosa pastel */
+    --homura-purple: #8a2be2;  /* Morado intenso */
+    --sayaka-blue: #00bfff;    /* Azul cielo brillante */
+    --mami-yellow: #ffd700;    /* Amarillo/Dorado */
+    --kyoko-red: #ff4500;      /* Rojo/Naranja intenso */
+    
+    --bg-dark: #050505;        /* Fondo casi negro */
+    --card-bg: #121212;        /* Fondo tarjeta oscuro */
+    --kyubey-eye: #ff0033;    /* Rojo para alertas */
+}
+
+/* Colores personalizados para las barras de progreso */
+
+/* Madoka - Rosa */
+.progress-bar.bg-madoka {
+    background-color: var(--madoka-pink) !important;
+}
+
+/* Homura - Morado */
+.progress-bar.bg-homura {
+    background-color: var(--homura-purple) !important;
+}
+
+/* Mami - Amarillo */
+.progress-bar.bg-mami {
+    background-color: var(--mami-yellow) !important;
+}
+
+/* Kyoko - Rojo Kyoko */
+.progress-bar.bg-kyoko {
+    background-color: var(--kyoko-red) !important;
+}
+
+/* Sayaka se queda con bg-danger de Bootstrap 
+   porque queremos ese rojo de "error/alerta" del sistema */
+
+/* Configuración General */
+body {
+    background-color: var(--bg-dark);
+    color: #e0e0e0;
+    font-family: 'JetBrains Mono', monospace; /* Tipo de letra técnico */
+}
+
+h1, h2, h3 {
+    font-family: 'Crimson Pro', serif; /* Tipo de letra más elegante/gótico */
+}
+
+/* Títulos principales en Rosa Madoka */
+header h1, section h2 {
+    color: var(--madoka-pink);
+}
+
+/* Navbar Estilo Terminal */
+.navbar {
+    border-bottom: 2px solid var(--kyubey-eye);
+    background-color: #000 !important;
+}
+
+.status-dot {
+    height: 12px;
+    width: 12px;
+    background-color: var(--kyubey-eye);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 10px var(--kyubey-eye);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+/* Tarjetas de Chicas Mágicas */
+.card-puella {
+    background-color: var(--card-bg);
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s ease;
+}
+
+.card-puella:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Clases para Bordes de Color (CORREGIDAS Y AÑADIDAS) */
+.border-madoka { border-left: 5px solid var(--madoka-pink) !important; }
+.border-homura { border-left: 5px solid var(--homura-purple) !important; }
+.border-sayaka { border-left: 5px solid var(--sayaka-blue) !important; }
+.border-mami   { border-left: 5px solid var(--mami-yellow) !important; }
+.border-kyoko  { border-left: 5px solid var(--kyoko-red) !important; }
+
+/* Botón de Contrato */
+.btn-contract {
+    background-color: transparent;
+    border: 2px solid var(--kyubey-eye);
+    color: var(--kyubey-eye);
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-contract:hover {
+    background-color: var(--kyubey-eye);
+    color: white;
+    box-shadow: 0 0 25px var(--kyubey-eye);
+}
+
+/* Modal Estilo Oscuro */
+.modal-content {
+    background-color: var(--card-bg);
+    border: 2px solid var(--kyubey-eye);
+    box-shadow: 0 0 30px rgba(255, 0, 51, 0.3);
+}
+
+/* Utilidad para ID pequeño */
+.x-small-id {
+    font-size: 0.75rem;
+    opacity: 0.6;
+}

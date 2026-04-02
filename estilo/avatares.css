@@ -1,0 +1,57 @@
+/* --- NUEVO CSS PARA LOS AVATARES --- */
+
+/* Contenedor del avatar: crea el marco circular */
+.avatar-container {
+    width: 60px; /* Tamaño del marco */
+    height: 60px; /* Tamaño del marco */
+    border-radius: 50%; /* Hace el marco circular */
+    overflow: hidden; /* Recorta la imagen grande */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    background-color: #000; /* Fondo negro por si acaso */
+    margin-bottom: 15px; /* Espacio con el nombre */
+}
+
+/* La imagen grande dentro del contenedor */
+.avatar-container img {
+    /* No definimos width ni height, usamos su tamaño original */
+    position: relative; /* Nos permite mover la imagen */
+}
+
+/* --- CLASES DE POSICIONAMIENTO PARA CADA CHICA --- */
+/* (Vamos a usar el primer sprite - la cara de frente - de cada fila) */
+
+/* Madoka - Fila 4, primer sprite */
+.avatar-madoka img {
+    top: -210px;  /* Ajusta este valor si no queda centrada */
+    left: -15px; /* Ajusta este valor si no queda centrada */
+    scale: 1.1; /* Un poco de zoom si es necesario */
+}
+
+/* Homura (con lentes) - Fila 2, primer sprite */
+/* (Si prefieres a Homura sin lentes, cambia el top a -10px) */
+.avatar-homura img {
+    top: -110px; /* Ajusta este valor */
+    left: -15px; /* Ajusta este valor */
+    scale: 1.1;
+}
+
+/* Sayaka - Fila 6, primer sprite */
+.avatar-sayaka img {
+    top: -410px; /* Ajusta este valor */
+    left: -15px; /* Ajusta este valor */
+    scale: 1.1;
+}
+
+/* Mami - Fila 5, primer sprite */
+.avatar-mami img {
+    top: -310px; /* Ajusta este valor */
+    left: -15px; /* Ajusta este valor */
+    scale: 1.1;
+}
+
+/* Kyoko - Fila 3, primer sprite */
+.avatar-kyoko img {
+    top: -10px;  /* Ajusta este valor */
+    left: -15px; /* Ajusta este valor */
+    scale: 1.1;
+}
