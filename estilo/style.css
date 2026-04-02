@@ -1,14 +1,22 @@
 /* Variables de color temáticas CORREGIDAS */
 :root {
-    --madoka-pink: #ffb7c5;    /* Rosa pastel */
-    --homura-purple: #8a2be2;  /* Morado intenso */
-    --sayaka-blue: #00bfff;    /* Azul cielo brillante */
-    --mami-yellow: #ffd700;    /* Amarillo/Dorado */
-    --kyoko-red: #ff4500;      /* Rojo/Naranja intenso */
-    
-    --bg-dark: #050505;        /* Fondo casi negro */
-    --card-bg: #121212;        /* Fondo tarjeta oscuro */
-    --kyubey-eye: #ff0033;    /* Rojo para alertas */
+    --madoka-pink: #ffb7c5;
+    /* Rosa pastel */
+    --homura-purple: #8a2be2;
+    /* Morado intenso */
+    --sayaka-blue: #00bfff;
+    /* Azul cielo brillante */
+    --mami-yellow: #ffd700;
+    /* Amarillo/Dorado */
+    --kyoko-red: #ff4500;
+    /* Rojo/Naranja intenso */
+
+    --bg-dark: #050505;
+    /* Fondo casi negro */
+    --card-bg: #121212;
+    /* Fondo tarjeta oscuro */
+    --kyubey-eye: #ff0033;
+    /* Rojo para alertas */
 }
 
 /* Colores personalizados para las barras de progreso */
@@ -40,15 +48,20 @@
 body {
     background-color: var(--bg-dark);
     color: #e0e0e0;
-    font-family: 'JetBrains Mono', monospace; /* Tipo de letra técnico */
+    font-family: 'JetBrains Mono', monospace;
+    /* Tipo de letra técnico */
 }
 
-h1, h2, h3 {
-    font-family: 'Crimson Pro', serif; /* Tipo de letra más elegante/gótico */
+h1,
+h2,
+h3 {
+    font-family: 'Crimson Pro', serif;
+    /* Tipo de letra más elegante/gótico */
 }
 
 /* Títulos principales en Rosa Madoka */
-header h1, section h2 {
+header h1,
+section h2 {
     color: var(--madoka-pink);
 }
 
@@ -70,9 +83,17 @@ header h1, section h2 {
 }
 
 @keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.4; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Tarjetas de Chicas Mágicas */
@@ -88,11 +109,25 @@ header h1, section h2 {
 }
 
 /* Clases para Bordes de Color (CORREGIDAS Y AÑADIDAS) */
-.border-madoka { border-left: 5px solid var(--madoka-pink) !important; }
-.border-homura { border-left: 5px solid var(--homura-purple) !important; }
-.border-sayaka { border-left: 5px solid var(--sayaka-blue) !important; }
-.border-mami   { border-left: 5px solid var(--mami-yellow) !important; }
-.border-kyoko  { border-left: 5px solid var(--kyoko-red) !important; }
+.border-madoka {
+    border-left: 5px solid var(--madoka-pink) !important;
+}
+
+.border-homura {
+    border-left: 5px solid var(--homura-purple) !important;
+}
+
+.border-sayaka {
+    border-left: 5px solid var(--sayaka-blue) !important;
+}
+
+.border-mami {
+    border-left: 5px solid var(--mami-yellow) !important;
+}
+
+.border-kyoko {
+    border-left: 5px solid var(--kyoko-red) !important;
+}
 
 /* Botón de Contrato */
 .btn-contract {
@@ -121,4 +156,176 @@ header h1, section h2 {
 .x-small-id {
     font-size: 0.75rem;
     opacity: 0.6;
+}
+
+.stats-list {
+    font-size: 0.75rem;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+}
+
+.stats-list li {
+    margin-bottom: 5px;
+}
+
+.label-tech {
+    color: #F5F5F5 !important;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.badge-status {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+}
+
+/* Estilos barra kármica */
+.bg-karmic {
+    background-color: rgba(255, 0, 51, 0.3) !important;
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.3);
+}
+
+.label-karmic {
+    color: rgba(255, 0, 51, 0.3) !important;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Botón de Info estilo minimalista */
+.btn-info-puella {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #aaa;
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-info-puella:hover {
+    border-color: var(--madoka-pink);
+    color: white;
+}
+
+/* Texto de descripción */
+.desc-text {
+    font-size: 0.7rem;
+    color: #888;
+    text-align: justify;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+}
+
+.accordion-item {
+    background-color: rgba(10, 10, 10, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin-bottom: 5px;
+}
+
+.accordion-button {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #1a1a1a !important;
+    color: var(--madoka-pink) !important;
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    filter: invert(1);
+    /* Hace que la flecha sea blanca */
+}
+
+.accordion-body {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    line-height: 1.4;
+}
+
+/* --- EFECTO TERMINAL CRT EQUILIBRADO --- */
+
+body {
+    background-color: #050505;
+    /* Un negro un poco más suave */
+    overflow-x: hidden;
+}
+
+/* 1. Estática muy sutil (Ruido) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Puntos más pequeños y más transparentes */
+    background: repeating-radial-gradient(#000 0 0.0001%, #ffffff 0 0.0002%) 50% 0/150px 150px;
+    opacity: 0.02;
+    /* Volvemos al 2% para que sea una textura suave */
+    animation: noise-anim .2s infinite;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* 2. Scanlines finas (Líneas de escaneo) */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Líneas horizontales muy delgadas */
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.15) 50%);
+    background-size: 100% 2px;
+    /* Solo 2px de grosor */
+    pointer-events: none;
+    z-index: 1001;
+    opacity: 0.6;
+}
+
+/* 3. Brillo de Texto (Glow) controlado */
+.card-title,
+h1,
+.display-3 {
+    /* Un resplandor más pequeño para que sea legible */
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.5px;
+}
+
+/* --- ANIMACIÓN SUAVE --- */
+@keyframes noise-anim {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 5px 5px;
+    }
+}
+
+/* --- AJUSTE DE TARJETAS --- */
+.card-puella {
+    background-color: #121212 !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: none;
+    /* Quitamos brillos externos pesados */
+    transition: border-color 0.3s ease;
+}
+
+.card-puella:hover {
+    /* Solo brilla un poco cuando pasas el mouse */
+    border-color: rgba(255, 255, 255, 0.2) !important;
 }

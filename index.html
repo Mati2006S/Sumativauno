@@ -1,129 +1,407 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyubey Dashboard - Incubator System</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;600&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;600&family=JetBrains+Mono:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./estilo/style.css">
+    <link rel="stylesheet" href="./estilo/avatares.css">
+    <style>
+        .stats-list {
+            font-size: 0.75rem;
+            text-align: left;
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 10px;
+        }
+
+        .stats-list li {
+            margin-bottom: 5px;
+        }
+
+        .label-tech {
+            color: #666;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .badge-status {
+            font-size: 0.65rem;
+            padding: 3px 8px;
+        }
+
+        /* Nuevos estilos */
+        .btn-info-puella {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #aaa;
+            font-size: 0.6rem;
+            padding: 2px 8px;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-info-puella:hover {
+            border-color: #ff69b4;
+            color: white;
+        }
+
+        .desc-text {
+            font-size: 0.7rem;
+            color: #888;
+            text-align: justify;
+            padding-top: 10px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            margin-top: 10px;
+            line-height: 1.2;
+        }
+    </style>
 </head>
+
 <body>
 
-<nav class="navbar navbar-dark mb-5">
-    <div class="container">
-        <span class="navbar-brand mb-0 h1">
-            <span class="status-dot"></span> INCUBATOR_OS <small class="text-muted ms-2" style="font-size: 0.7em;">v1.0.32</small>
-        </span>
-        <div class="text-end">
-            <span class="small text-muted me-2">ENTROPÍA DEL UNIVERSO: <span class="text-danger">98.4%</span></span>
+    <nav class="navbar navbar-dark mb-5">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">
+                <span class="status-dot"></span> INCUBATOR_OS <small class="text-muted ms-2"
+                    style="font-size: 0.7em;">v1.0.32</small>
+            </span>
+            <div class="text-end">
+                <span class="small text-muted me-2">ENTROPÍA DEL UNIVERSO: <span class="text-danger">98.4%</span></span>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<main class="container">
-    <header class="text-center mb-5">
-        <h1 class="display-3">CONTRATOS ACTIVOS</h1>
-        <p class="text-muted small">Terminal de monitoreo de gemas del alma de Mitakihara</p>
-    </header>
+    <main class="container">
+        <header class="text-center mb-5">
+            <h1 class="display-3">CONTRATOS ACTIVOS</h1>
+            <p class="text-muted small">Terminal de monitoreo de gemas del alma de Mitakihara</p>
+        </header>
 
-    <div class="row g-4 mb-4">
-        <div class="col-md-4">
-            <div class="card card-puella h-100 border-madoka">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: var(--madoka-pink);">Madoka Kaname</h5>
-                    <p class="text-muted x-small">ID: #001_DIVINE</p>
-                    <div class="progress bg-dark mb-2" style="height: 10px;">
-                        <div class="progress-bar bg-madoka" style="width: 15%"></div>
+        <div class="row g-4 mb-4 justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-puella h-100 border-madoka">
+                    <div class="card-body text-center">
+                        <div class="avatar-container mx-auto">
+                            <img src="./recursos/madoka.png" alt="Madoka">
+                        </div>
+                        <h5 class="card-title" style="color: var(--madoka-pink);">Madoka Kaname</h5>
+                        <span class="badge bg-info badge-status text-dark">ESTADO: ???</span>
+
+                        <ul class="stats-list text-muted">
+                            <li><span class="label-tech">Deseo:</span> Erradicar brujas</li>
+                            <li><span class="label-tech">Habilidad:</span> Flechas de luz</li>
+                        </ul>
+
+                        <div class="progress bg-dark mb-1" style="height: 8px;">
+                            <div class="progress-bar bg-madoka" style="width: 15%"></div>
+                        </div>
+                        <label class="small text-muted mb-2" style="font-size: 0.6rem;">Corrupción: 15%</label>
+
+                        <div class="progress bg-dark" style="height: 6px;">
+                            <div class="progress-bar bg-karmic progress-bar-striped progress-bar-animated"
+                                style="width: 100%"></div>
+                        </div>
+                        <span class="label-karmic">Potencial Kármico: INFINITO</span>
+
+                        <button class="btn btn-info-puella" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#descMadoka">DESCRIPCIÓN_LOG</button>
+                        <div class="collapse" id="descMadoka">
+                            <div class="desc-text">Una chica amable cuya existencia se convirtió en la "Ley de los
+                                Ciclos". Posee el potencial kármico más alto registrado en la historia.</div>
+                        </div>
                     </div>
-                    <label class="small text-muted">Corrupción: 15%</label>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-puella h-100 border-homura">
+                    <div class="card-body text-center">
+                        <div class="avatar-container mx-auto">
+                            <img src="./recursos/Homura.png" alt="Homura">
+                        </div>
+                        <h5 class="card-title" style="color: var(--homura-purple);">Homura Akemi</h5>
+                        <span class="badge bg-success badge-status">ESTADO: VIVA</span>
+
+                        <ul class="stats-list text-muted">
+                            <li><span class="label-tech">Deseo:</span> Proteger a Madoka</li>
+                            <li><span class="label-tech">Habilidad:</span> Tiempo / Armas</li>
+                        </ul>
+
+                        <div class="progress bg-dark mb-1" style="height: 8px;">
+                            <div class="progress-bar bg-homura" style="width: 65%"></div>
+                        </div>
+                        <label class="small text-muted mb-2" style="font-size: 0.6rem;">Corrupción: 65%</label>
+
+                        <div class="progress bg-dark" style="height: 6px;">
+                            <div class="progress-bar bg-karmic" style="width: 85%"></div>
+                        </div>
+                        <span class="label-karmic">Potencial Kármico: EXTREMO</span>
+
+                        <button class="btn btn-info-puella" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#descHomura">DESCRIPCIÓN_LOG</button>
+                        <div class="collapse" id="descHomura">
+                            <div class="desc-text">Viajera del tiempo atrapada en un bucle infinito para salvar a su
+                                única amiga. Su frialdad es una máscara para su desesperación.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-puella h-100 border-mami">
+                    <div class="card-body text-center">
+                        <div class="avatar-container mx-auto">
+                            <img src="./recursos/Mami.png" alt="Mami">
+                        </div>
+                        <h5 class="card-title" style="color: var(--mami-yellow);">Mami Tomoe</h5>
+                        <span class="badge bg-danger badge-status">ESTADO: MUERTA</span>
+
+                        <ul class="stats-list text-muted">
+                            <li><span class="label-tech">Deseo:</span> Sobrevivir</li>
+                            <li><span class="label-tech">Habilidad:</span> Mosquetes</li>
+                        </ul>
+
+                        <div class="progress bg-dark mb-1" style="height: 8px;">
+                            <div class="progress-bar bg-mami" style="width: 30%"></div>
+                        </div>
+                        <label class="small text-muted mb-2" style="font-size: 0.6rem;">Corrupción: 30%</label>
+
+                        <div class="progress bg-dark" style="height: 6px;">
+                            <div class="progress-bar bg-karmic" style="width: 40%"></div>
+                        </div>
+                        <span class="label-karmic">Potencial Kármico: ESTÁNDAR</span>
+
+                        <button class="btn btn-info-puella" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#descMami">DESCRIPCIÓN_LOG</button>
+                        <div class="collapse" id="descMami">
+                            <div class="desc-text">Veterana solitaria que servía como guía. Su deseo de no morir sola la
+                                llevó a un destino trágico en el Laberinto de Charlotte.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card card-puella h-100 border-homura">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: var(--homura-purple);">Homura Akemi</h5>
-                    <p class="text-muted x-small">ID: #002_TIMER</p>
-                    <div class="progress bg-dark mb-2" style="height: 10px;">
-                        <div class="progress-bar bg-homura" style="width: 65%"></div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-puella h-100 border-sayaka">
+                    <div class="card-body text-center">
+                        <div class="avatar-container mx-auto">
+                            <img src="./recursos/Sayaka.png" alt="Sayaka">
+                        </div>
+                        <h5 class="card-title" style="color: var(--sayaka-blue);">Sayaka Miki</h5>
+                        <span class="badge bg-dark badge-status text-danger border border-danger">ESTADO: BRUJA</span>
+
+                        <ul class="stats-list text-muted">
+                            <li><span class="label-tech">Deseo:</span> Curar a Kyousuke</li>
+                            <li><span class="label-tech">Habilidad:</span> Regeneración</li>
+                        </ul>
+
+                        <div class="progress bg-dark mb-1" style="height: 8px;">
+                            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+                                style="width: 92%"></div>
+                        </div>
+                        <label class="small text-danger mb-2" style="font-size: 0.6rem;">ALERTA: 92%</label>
+
+                        <div class="progress bg-dark" style="height: 6px;">
+                            <div class="progress-bar bg-karmic" style="width: 25%"></div>
+                        </div>
+                        <span class="label-karmic">Potencial Kármico: BAJO</span>
+
+                        <button class="btn btn-info-puella" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#descSayaka">DESCRIPCIÓN_LOG</button>
+                        <div class="collapse" id="descSayaka">
+                            <div class="desc-text">Su sentido de la justicia chocó con la dura realidad. El dolor de un
+                                amor no correspondido aceleró la caída de su Soul Gem.</div>
+                        </div>
                     </div>
-                    <label class="small text-muted">Corrupción: 65%</label>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-puella h-100 border-kyoko">
+                    <div class="card-body text-center">
+                        <div class="avatar-container mx-auto">
+                            <img src="./recursos/Kyoko.png" alt="Kyoko">
+                        </div>
+                        <h5 class="card-title" style="color: var(--kyoko-red);">Kyoko Sakura</h5>
+                        <span class="badge bg-danger badge-status">ESTADO: MUERTA</span>
+
+                        <ul class="stats-list text-muted">
+                            <li><span class="label-tech">Deseo:</span> Fe familiar</li>
+                            <li><span class="label-tech">Habilidad:</span> Lanza Segmentada</li>
+                        </ul>
+
+                        <div class="progress bg-dark mb-1" style="height: 8px;">
+                            <div class="progress-bar bg-kyoko" style="width: 45%"></div>
+                        </div>
+                        <label class="small text-muted mb-2" style="font-size: 0.6rem;">Corrupción: 45%</label>
+
+                        <div class="progress bg-dark" style="height: 6px;">
+                            <div class="progress-bar bg-karmic" style="width: 50%"></div>
+                        </div>
+                        <span class="label-karmic">Potencial Kármico: MEDIO</span>
+
+                        <button class="btn btn-info-puella" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#descKyoko">DESCRIPCIÓN_LOG</button>
+                        <div class="collapse" id="descKyoko">
+                            <div class="desc-text">Una chica ruda que solo luchaba para sí misma tras perder a su
+                                familia, hasta que encontró una conexión inesperada con Sayaka.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <section class="mt-5 mb-5">
+            <h2 class="text-center mb-4 label-tech" style="color: var(--madoka-pink) !important;">
+                <span class="status-dot" style="background-color: var(--madoka-pink);"></span> GUÍA DEL SISTEMA
+                (GLOSARIO)
+            </h2>
 
-        <div class="col-md-4">
-            <div class="card card-puella h-100 border-sayaka">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: var(--sayaka-blue);">Sayaka Miki</h5>
-                    <p class="text-muted x-small">ID: #003_KNIGHT</p>
-                    <div class="progress bg-dark mb-2" style="height: 10px;">
-                        <div class="progress-bar bg-sayaka progress-bar-striped progress-bar-animated" style="width: 92%"></div>
+            <div class="accordion accordion-flush bg-transparent" id="glossaryAccordion">
+                <div class="accordion-item bg-dark border-secondary">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white label-tech" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#term_contexto">
+                            00. ¿QUÉ ES MADOKA MAGICA?
+                        </button>
+                    </h2>
+                    <div id="term_contexto" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body text-white small">
+                            <p><strong>Contexto de la interfaz:</strong> Este proyecto utiliza la estética de la serie
+                                de anime <em>Puella Magi Madoka Magica</em>.</p>
+                            <p><strong>Resumen:</strong> Es un thriller psicológico que subvierte el género de "chicas
+                                mágicas". La trama presenta un sistema donde adolescentes sacrifican su humanidad por un
+                                milagro, monitoreadas por una inteligencia alienígena (Kyubey) que busca recolectar la
+                                energía de sus emociones para evitar la muerte del universo (Entropía).</p>
+                            <p><strong>Diseño:</strong> Se eligió esta temática para demostrar el uso de
+                                <strong>Bootstrap 5</strong>, manipulación de <strong>DOM</strong> (modales y filtros) y
+                                diseño de interfaces oscuras de alto contraste.</p>
+                        </div>
                     </div>
-                    <label class="small text-danger font-weight-bold">ALERTA: 92% (CRÍTICO)</label>
+                </div>
+                <div class="accordion-item bg-dark border-secondary">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white label-tech" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#term1">
+                            01. PUELLA MAGI (CHICA MÁGICA)
+                        </button>
+                    </h2>
+                    <div id="term1" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body text-muted small">
+                            Individuo que ha formalizado un contrato con la Incubadora. A cambio de un deseo que desafía
+                            la entropía, su alma es extraída y cristalizada.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark border-secondary">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white label-tech" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#term2">
+                            02. SOUL GEM (GEMA DEL ALMA)
+                        </button>
+                    </h2>
+                    <div id="term2" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body text-muted small">
+                            Fuente de poder y esencia vital de la Puella Magi. Su brillo indica pureza; la acumulación
+                            de "Grief" (desesperación) oscurece la gema.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark border-secondary">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white label-tech" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#term3">
+                            03. CORRUPCIÓN / ENTROPÍA
+                        </button>
+                    </h2>
+                    <div id="term3" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body text-muted small">
+                            Proceso de degradación energética. Cuando la corrupción llega al 100%, la Gema del Alma
+                            colapsa, transformándose en una Grief Seed.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark border-secondary">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white label-tech" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#term4">
+                            04. POTENCIAL KÁRMICO
+                        </button>
+                    </h2>
+                    <div id="term4" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body text-muted small">
+                            Magnitud de la influencia de un individuo en el destino del universo. Determina la fuerza
+                            del deseo y el poder de la Puella Magi resultante.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center mt-5 py-5 border-top border-secondary">
+            <h2 class="mb-4 text-white">¿Tienes un deseo que valga tu alma?</h2>
+            <button class="btn btn-contract px-5 py-3" data-bs-toggle="modal" data-bs-target="#contractModal">
+                INICIAR CONTRATO
+            </button>
+        </section>
+        <div class="modal fade" id="contractModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-white bg-dark border-danger shadow-lg">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title text-danger">FORMALIZAR CONTRATO</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center py-4">
+                        <p class="fst-italic lead">"Te concederé cualquier deseo, el que sea..."</p>
+
+                        <div class="mt-4 mb-3 text-start">
+                            <label for="userWish" class="label-tech mb-2">Escribe tu deseo aquí:</label>
+                            <textarea class="form-control bg-black text-white border-secondary" id="userWish" rows="3"
+                                placeholder="Ej: Deseo que el mundo sea libre de brujas..."></textarea>
+                        </div>
+
+                        <p class="text-muted small mt-2">¿Estás dispuesta a pagar con tu alma por esto?</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center">
+                        <button type="button" class="btn btn-outline-light px-4"
+                            data-bs-dismiss="modal">RETROCEDER</button>
+                        <button type="button" class="btn btn-danger px-4 shadow-sm"
+                            onclick="firmarContrato()">ACEPTAR</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="row g-4 justify-content-center">
-        <div class="col-md-4">
-            <div class="card card-puella h-100 border-mami">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: var(--mami-yellow);">Mami Tomoe</h5>
-                    <p class="text-muted x-small">ID: #004_VETERAN</p>
-                    <div class="progress bg-dark mb-2" style="height: 10px;">
-                        <div class="progress-bar bg-mami" style="width: 30%"></div>
-                    </div>
-                    <label class="small text-muted">Corrupción: 30%</label>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
+            <div id="kyubeyToast" class="toast bg-dark text-white border-danger" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="toast-header bg-black text-danger border-bottom border-danger">
+                    <strong class="me-auto">SISTEMA INCUBADORA</strong>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+                <div class="toast-body" id="toastMessage">
+                    Analizando potencial kármico...
                 </div>
             </div>
         </div>
+    </main>
 
-        <div class="col-md-4">
-            <div class="card card-puella h-100 border-kyoko">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: var(--kyoko-red);">Kyoko Sakura</h5>
-                    <p class="text-muted x-small">ID: #005_STREET</p>
-                    <div class="progress bg-dark mb-2" style="height: 10px;">
-                        <div class="progress-bar bg-kyoko" style="width: 45%"></div>
-                    </div>
-                    <label class="small text-muted">Corrupción: 45%</label>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="text-center mt-5 py-5 border-top border-secondary">
-        <h2 class="mb-4 text-white">¿Tienes un deseo que valga tu alma?</h2>
-        <button class="btn btn-contract px-5 py-3" data-bs-toggle="modal" data-bs-target="#contractModal">
-            INICIAR CONTRATO
-        </button>
-    </section>
-</main>
-
-<div class="modal fade" id="contractModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content text-white">
-            <div class="modal-header border-0">
-                <h5 class="modal-title text-danger">FORMALIZAR CONTRATO</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body text-center py-4">
-                <p class="fst-italic lead">"Conviértete en una Puella Magi y cumple tu destino."</p>
-                <p class="text-muted small mt-2">¿Estás dispuesta a pagar el precio?</p>
-            </div>
-            <div class="modal-footer border-0 justify-content-center">
-                <button type="button" class="btn btn-outline-light px-4" data-bs-dismiss="modal">RETROCEDER</button>
-                <button type="button" class="btn btn-danger px-4 shadow-sm">ACEPTAR</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Scripts/script.js"></script>
 </body>
+
 </html>
